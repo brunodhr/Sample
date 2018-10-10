@@ -30,7 +30,8 @@
 <nav class="navbar py-4 navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand logo" href="/">
-            <img class="img-fluid" src="{{ asset('/storage/'.setting('site.logo')) }}" alt="logo">
+        
+            <img class="img-fluid" src="{{asset('img/example-foto.png')}}" alt="logo">
         </a>
         <ul class="navbar-nav mt-2 mt-lg-0 py-1">
             <li class="nav-item active">

@@ -1,7 +1,7 @@
 .footer{
     width: 100%;
     height: 6.68rem ;
-    background-color: #0d1a34;
+    background-color: red;
     
 }
 
@@ -12,7 +12,7 @@
 .copyright{
     width: 100%;
     height: 9.2rem;
-    background-color: #0b162c ;
+    background-color: green ;
 }
 
 .footer-sections-title{
@@ -39,7 +39,7 @@
         color:white;
     }
     a:hover{
-        color:#286ff5;
+        color:blue;
     }
 }
 .footer-sections-youtube{
@@ -56,7 +56,7 @@
     font-family:'Roboto';
     font-size:2.4rem;
     font-weight: bold;
-    color:#dca041;
+    color:blue;
 }
 .sub-sections-footer{
     font-family:'Roboto';
@@ -64,7 +64,7 @@
     color:white;
     &:hover{
         text-decoration:none;
-        color:#dca041;
+        color:blue;
     }
 }
 .sub-contact-footer{
@@ -89,7 +89,6 @@
     font-size: 1.5rem;
     display: flex;
 }
-
 .icons-sociais{
     padding-left:0.6rem;
     padding-right:0.6rem;
@@ -132,43 +131,8 @@
     }
     .container{
     display: flex;
-        @media(max-width:991px){
-            flex-direction: column;
-        }
-    .contact-info{
-        display: flex;
-        @media(min-width:992px){
-            justify-content: flex-start;
-        }
-        @media(max-width:991px){
-            justify-content: center;
-        }
-        @media(max-width:767px){                
-            justify-content: center;
-        }
-        @media(max-width:425px){
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
-
-        .action-buttons{
+        .contact-info{
             display: flex;
-            @media(min-width:992px){
-                justify-content: flex-end;
-            }          
-            @media(max-width:991px){
-                justify-content: center;
-            }  
-            padding-right: 35px;
-            @media(max-width:767px){
-                
-                justify-content: center;
-            }
-            @media(max-width:425px){
-                flex-direction: column;
-                justify-content: center;
-            }
-        }
         }
     }
+}

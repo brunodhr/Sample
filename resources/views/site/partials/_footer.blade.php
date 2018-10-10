@@ -7,7 +7,7 @@
                         <div class="footer-sections-contato">
                             <div class="footer-sections-item pb-5 text-center text-md-left">
                                 <a href="/">
-                                    <img class="" src="{{asset('img/logo.png')}}" alt="">
+                                    <img class="img-fluid" src="{{asset('img/example-foto.png')}}" alt="">
                                 </a>
                             </div>
                         </div>

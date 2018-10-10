@@ -19,6 +19,7 @@
 @yield('content')
 
 {!! menu('Principal', 'site.partials._footer') !!}
+
 <script src="{{ asset('/js/app.js') }}"></script>
 
 <script src="{{ asset('/js/custom.js') }}"></script>
