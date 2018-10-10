@@ -14,24 +14,6 @@ use Illuminate\Support\Facades\Input;
 */
 Route::get('/', 'Site\HomeController@index')->name('home');
 
-Route::get('/agenda', 'Site\EventoAgendaController@index')->name('evento');
-
-Route::get('/agendax', 'Site\EventoAgendaController@indexAjax')->name('eventoAjax');
-
-Route::get('/agenda/{slug}', 'Site\EventoAgendaController@interna')->name('evento.interna');
-
-Route::get('/galeria', 'Site\GaleriaEventoController@slideshow');
-
-Route::get('/galeria-evento/{id}', 'Site\GaleriaEventoController@show')->name('galeria-evento');
-
-Route::get('/blog', 'Site\PostController@index')->name('blog');
-
-Route::get('/blog/{slug}', 'Site\PostController@interna')->name('blog.interna');
-
-Route::get('/orquestra', 'Site\OrquestraController@index')->name('orquestra');
-
-// Rotas de notícias por ajax na home
-Route::get('/get-postagens-ajax', 'Site\HomeController@getPostagens')->name('get.postagens');
 
 Route::get('/doeagora/pagamento', 'Site\DoeAgoraController@pagamento')->name('doeagora.pagamento');
 
@@ -41,9 +23,11 @@ Route::post('/doeagora/pedido', 'Site\DoeAgoraController@pedido')->name('doeagor
 
 Route::post('/doeagora/boleto', 'Site\DoeAgoraController@boleto')->name('doeagora.boleto');
 
+
 Route::get('/doeagora','Site\DoeAgoraController@index')->name('doeagora');
 
 Route::post('/doeagora','Site\DoeAgoraController@store')->name('doeagora.store');
+
 
 Route::get('/contato', 'Site\ContatoController@index')->name('sitecontato');
 
