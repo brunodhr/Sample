@@ -1,0 +1,21 @@
+@import "vendors/bootstrap.scss";
+@import "vendors/slick";
+@import "vendors/slick-theme";
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/contato";
+@import "pages/doeagora";
+@import "pages/home";

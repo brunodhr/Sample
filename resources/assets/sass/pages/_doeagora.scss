@@ -1,0 +1,94 @@
+.faca-sua-doacao{
+    font-size:3.6rem;
+    font-weight:Light;
+    color:#1b2348;
+}
+.contribuicao-field{
+    background-color: white;
+    width: 250px;
+    padding-left:20px;
+    height: 39px;
+    border:2px solid #ebebeb;
+    border-radius: 10px;
+    &:focus{
+        background-color:#ebebeb;
+    }
+}
+.contribuicao-text{
+    font-family: 'Roboto';
+    font-size:1.8rem;
+    color:#0c2849;
+}
+.doacao-field{
+    margin-top:5rem;
+    border-radius: 10px;
+    background-color: #f9f9fb;
+    border: 1px solid #ebebeb;
+}
+.reais{
+    font-family:'Roboto';
+    font-size:1.6rem;
+    margin-left:10px;
+    margin-right:4px;
+    color:#1b2348;
+}
+.valor{
+    font-family:'Roboto';
+    font-size:3.6rem;
+    margin-bottom:10px;
+    color:#1b2348;
+}
+.selecionar-valor-field{
+    width: 125px;
+    height: 84px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 2px solid #ebebeb;
+}
+.button-doar{
+    cursor:pointer;
+    color:white;
+    font-size:1.4rem;
+    font-weight:bold;
+    width: 159px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #1b2347;
+}
+.navs-title{
+    font-size:2.4rem;
+}
+.DisplayNone{
+    display:none;
+}
+.FormularioBase{
+    font-size: 22px;
+    font-family: 'Roboto';
+}
+.Formulario{
+    float:left;
+    width: 30.333333%; 
+    margin: 15px 1.5%;
+}
+.Formulario input[type='text'],.Formulario select{
+    float:left; 
+    width: 80%; 
+    height: 40px; 
+    font-size: 18px;
+}
+.Formulario .BandeiraCartao{
+    float:left; 
+    width: 20%;
+}
+.CartaoCredito{
+    font-size:1.8rem;
+    color:black;
+}
+.Boleto{
+    font-size:1.8rem;
+    color:black;
+}
+.Debito{
+    font-size:1.8rem;
+    color:black;
+}
