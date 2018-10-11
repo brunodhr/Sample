@@ -86,76 +86,21 @@
 </section>
 <!-- Fim Destaques -->
 <!-- Inicio depoimentos -->
-<div style="position:relative;">
-    <div class="depoimentos mb-0">
-        @foreach($depoimentos as $depoimento)
-            <div class="" style="height: 45rem; background-image: url({{asset('img/example-foto.png')}}); background-position: 45% 40%; background-size: cover; position:relative">
-                <div class="h-100 container">
-                    <div class="h-100 d-flex flex-column justify-content-center align-items-center">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <h1 class="w-100 text-center titulo-depoimentos">Depoimentos de nossos parceiros</h1>
-                        </div>  
-                        <div class="d-flex justify-content-center">
-                            <p class="descricao-depoimentos text-center" style="max-width: 55%;">{{$depoimento->descricao}}</p>
-                        </div>
-                        <div class="d-flex align-items-center" style="width: 25%;">
-                            <img class="foto-parceiro" src="{{asset('img/example-foto.png')}}" alt="">
-                            <div class="ml-3 d-flex flex-column">
-                                <span class="nome-parceiro">{{$depoimento->nome}}</span>
-                                <span class="cargo-parceiro">{{$depoimento->cargo}}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-    </div>
-    <div class="pointers-depoimentos"></div>
-</div>
 @endsection
 
 @section('js')
 <script>
-    $(document).ready(function(){
-        $('.one-time').slick({
-            dots:true,
-            arrows:true,
-            autoplay:false,
-            infinite:true,
-            speed:300,
-            appendArrows: $('.pointers'),
-            nextArrow: "<img src='img/seta-modal-direita.png'>",
-            prevArrow: "<img src='img/seta-modal-esquerda.png'>",
-        });
+$(document).ready(function(){
+    $('.one-time').slick({
+        dots:true,
+        arrows:true,
+        autoplay:false,
+        infinite:true,
+        speed:300,
+        appendArrows: $('.pointers'),
+        nextArrow: "<img src='img/seta-modal-direita.png'>",
+        prevArrow: "<img src='img/seta-modal-esquerda.png'>",
     });
-    $(document).ready(function(){
-        $('.depoimentos').slick({
-            dots:false,
-            arrows:true,
-            autoplay:false,
-            infinite:true,
-            speed:300,
-            appendArrows: $('.pointers-depoimentos'),
-            nextArrow: "<img src='img/seta-depoimentos-right.png'>",
-            prevArrow: "<img src='img/seta-depoimentos-left.png'>",
-        });
-    });
-    $(document).ready(function(){
-        $('.postagens-blog').slick({
-            dots:false,
-            arrows:true,
-            autoplay:false,
-            infinite:true,
-            slidesToShow: 3,
-            speed:300,
-            appendArrows: $('.pointers-blog'),
-            nextArrow: "<i class='fas fa-long-arrow-alt-right' aria-hidden='true'></i>",
-            prevArrow: "<i class='fas fa-long-arrow-alt-left' aria-hidden='true'></i>",
-        });
-    });
-    $('#calendar-demo').dcalendar();
-    $('input').dcalendarpicker({
-    format: 'dd-mm-yyyy'
 });
 </script>
 @endsection
