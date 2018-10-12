@@ -10,6 +10,7 @@ use App\Models\DoeAgora;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\components\CarrinhoComponent;
 use PagSeguro;
+
 class DoeAgoraController extends Controller
 {
 	

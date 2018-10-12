@@ -1,15 +1,7 @@
-@extends('main')
+@extends('layout')
 @section('title', 'Doe Agora')
 
-@section('content')
-<!-- Inicio Banner -->
-<section style="background-color:#f7f3e5; height: 20rem;">
-    <div class="d-flex flex-column align-items-center justify-content-center h-100">
-        <h1 class="titulo-contato">Doe Agora</h1>
-        <p class="descricao-contato"><a class="descricao-contato" style="text-decoration:none;" href="/">Home</a> &raquo; Doe Agora</p>
-    </div>
-</section>
-<!-- Final Banner -->
+@section('pagina_conteudo')
 <ul class="nav nav-tabs justify-content-around">
     <li class="active"><a class="navs-title" data-toggle="tab" href="#credito">Credito</a></li>
     <li><a class="navs-title" data-toggle="tab" href="#boleto">Boleto</a></li>

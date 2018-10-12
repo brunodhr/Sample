@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Site;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 use App\Pedido;
 use App\Produto;
 use App\PedidoProduto;
@@ -25,7 +26,7 @@ class CarrinhoController extends Controller
             'user_id' => Auth::id()
             ])->get();
 
-        return view('carrinho.index', compact('pedidos'));
+        return view('site.carrinho.index', compact('pedidos'));
     }
 
     public function adicionar()
@@ -181,7 +182,7 @@ class CarrinhoController extends Controller
             'user_id' => Auth::id()
             ])->orderBy('updated_at', 'desc')->get();
 
-        return view('carrinho.compras', compact('compras', 'cancelados'));
+        return view('site.carrinho.compras', compact('compras', 'cancelados'));
 
     }
 

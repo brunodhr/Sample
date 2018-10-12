@@ -1,15 +1,8 @@
-@extends('main')
+@extends('layout')
 @section('title', 'Pagamento')
 
-@section('content')
-<!-- Inicio Banner -->
-<section style="background-color:#f7f3e5; height: 20rem;">
-    <div class="d-flex flex-column align-items-center justify-content-center h-100">
-        <h1 class="titulo-contato">Pagamento</h1>
-        <p class="descricao-contato">Home &raquo; Pagamento</p>
-    </div>
-</section>
-<!-- Final Banner -->
+@section('pagina_conteudo')
+
 <section class="doacao-field container">
         @if(!empty(session('message')))
             <h2 class="{{ session('alertType') }} text-center" style="color:white;">{{ session('message') }}</h2>

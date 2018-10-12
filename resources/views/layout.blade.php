@@ -9,69 +9,35 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen,projection">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Fontawesome Lib -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-    <link href="/css/styles.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-wrapper light-blue row">
-                <a href="{{ route('index') }}" class="brand-logo col offset-l1">Loja virtual</a>
-                <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ route('carrinho.compras') }}">Minhas compras</a></li>
-                    <li><a href="{{ route('carrinho.index') }}">Carrinho</a></li>
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Entrar</a></li>
-                        <li><a href="{{ url('/register') }}">Cadastre-se</a></li>
-                    @else
-                        <li>
-                            <a class="dropdown-button" href="#!" data-activates="dropdown-user">
-                                Olá {{ Auth::user()->name }}!<i class="material-icons right">arrow_drop_down</i>
-                            </a>
-                            <ul id="dropdown-user" class="dropdown-content">
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="{{ url('/logout') }}"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                        Sair
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        @yield('pagina_conteudo')
 
-        @if(!Auth::guest())
-            <form id="logout-form" action="{{ url('/logout') }}" method="POST" class="hide">
-                {{ csrf_field() }}
-            </form>
-        @endif
-    </main>
-    <footer class="page-footer blue">
-        <div class="footer-copyright">
-            <div class="container">
-                Desenvolvido para Curso de carrinho de compras com Laravel
-            </div>
-        </div>
-    </footer>
+@include('site.partials._navbar')
 
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    @stack('scripts')
-    <script type="text/javascript">
-        $( document ).ready(function(){
-            $(".button-collapse").sideNav();
-            $('select').material_select();
-        });
-    </script>
+    @yield('pagina_conteudo')
+
+    @if(!Auth::guest())
+        <form id="logout-form" action="{{ url('/logout') }}" method="POST" class="hide">
+            {{ csrf_field() }}
+        </form>
+    @endif
+
+@include('site.partials._footer')
+
+    <!-- jQuery -->
+    <script src="{{ asset('/js/app.js') }}"></script>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
+    <!-- Jquery Mask -->
+    <script src="{{ asset('/js/jquery.mask.min.js') }}"></script>
+    <!-- Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    @yield('js')
+
 </body>
 </html>

@@ -1,49 +1,41 @@
-<!--INICIO NAVBAR -->
-<!--inicio linha-topo -->
-<div class="topo">
-    <div class="container">
-        <div class="contact-info col-md-12 col-lg-4">
-            <a href="#" target="_blank" class="facebook">
-                <i style="padding-right:9px;padding-left:9px;" class="icons-sociais fab fa-facebook-f"></i>
-            </a>
-            <a href="#" target="_blank" class="instagram">
-                <i class="icons-sociais fab fa-instagram"></i>
-            </a>
-            <a href="#" target="_blank" class="linkedin">
-                <i class="icons-sociais fab fa-linkedin-in"></i>
-            </a>
+<header>
+    <nav>
+        <div class="nav-wrapper light-blue row">
+            <a href="{{ route('index') }}" class="brand-logo col offset-l1">LOGO</a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ route('carrinho.compras') }}">Minhas compras</a></li>
+                <li><a href="{{ route('carrinho.index') }}">Carrinho</a></li>
+                @if (Auth::guest())
+                    <li><a href="{{ url('/doeagora') }}">Pagamento</a></li>
+                    <li><a href="{{ url('/login') }}">Entrar</a></li>
+                    <li><a href="{{ url('/register') }}">Cadastre-se</a></li>
+                @else
+                    <li>
+                        <a class="dropdown-button" href="#!" data-activates="dropdown-user">
+                            Olá {{ Auth::user()->name }}!<i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                        <ul id="dropdown-user" class="dropdown-content">
+                            <li class="divider"></li>
+                            <li>
+                                <a href="{{ url('/logout') }}"
+                                    onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    Sair
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                @endif
+            </ul>
         </div>
-    <div class="action-buttons col-md-12 col-lg-8">
-        <div class="d-flex align-items-center card-doe px-4 h-100">
-            <a href="/doeagora" class="doe">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="ml-2">
-                    Carrinho
-                </span>
-            </a>
-        </div>
-    </div>
-    </div>
-</div>
-<!-- Fim linha topo -->
-<!-- Inicio nav bar -->
-<nav class="navbar py-4 navbar-expand-lg navbar-light">
-    <div class="container">
-        <a class="navbar-brand logo" href="/">
-        
-            <img class="img-fluid" src="{{asset('img/example-foto.png')}}" alt="logo">
-        </a>
-        <ul class="navbar-nav mt-2 mt-lg-0 py-1">
-            <li class="nav-item active">
-                <a class="nav-itens nav-link px-3 ml-5 mr-3" href="/">Produtos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-itens nav-link px-3 ml-5 mr-3" href="/doeagora">Pagamento</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-itens nav-link px-3 ml-5 mr-3" href="/contato">Contato</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<!-- FIM NAVBAR -->
+    </nav>
+</header>
+@section('js')
+<script>
+$( document ).ready(function(){
+    $(".button-collapse").sideNav();
+    $('select').material_select();
+});
+</script>
+@endsection

@@ -105,9 +105,7 @@
     {{ csrf_field() }}
     <input type="hidden" name="id">
 </form>
-
-@push('scripts')
-    <script type="text/javascript" src="/js/carrinho.js"></script>
-@endpush
-
+@endsection
+@section('js')
+    <script type="text/javascript" src="{{ asset('/js/carrinho.js') }}"></script>
 @endsection

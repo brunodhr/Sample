@@ -10516,12 +10516,6 @@ a.text-dark:focus {
   display: none;
 }
 
-/* Slider */
-
-/* Icons */
-
-/* Arrows */
-
 .slick-prev,
 .slick-next {
   position: absolute;
@@ -10693,18 +10687,6 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-}
 
 .topo {
   background-color: red;
@@ -11312,90 +11294,5 @@ body {
 .Debito {
   font-size: 1.8rem;
   color: black;
-}
-
-.navbar-light .navbar-nav .show > .nav-link::after,
-.navbar-light .navbar-nav .active > .nav-link::after,
-.navbar-light .navbar-nav .nav-link.show::after,
-.navbar-light .navbar-nav .nav-link.active::after {
-  content: '';
-  background-color: #DCA041;
-  display: block;
-  margin-top: 5px;
-  width: 5.5rem;
-  height: 2px;
-}
-
-.one-time {
-  max-height: 90rem;
-  overflow-y: hidden;
-}
-
-.one-time .slick-dots {
-  bottom: 70px;
-}
-
-.one-time .slick-dots .slick-active button:after,
-.one-time .slick-dots .slick-active button:before {
-  color: black;
-  font-size: 17px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-49%, -43%);
-          transform: translate(-49%, -43%);
-}
-
-.one-time .slick-dots li button {
-  background-color: white;
-  border-radius: 50%;
-  width: 2rem;
-}
-
-.one-time .slick-dots li button:after,
-.one-time .slick-dots li button:before {
-  color: transparent;
-}
-
-.pointers {
-  position: absolute;
-  bottom: 30rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 2rem;
-}
-
-.body {
-  font-family: Montserrat;
-  line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-.logo img {
-  width: 20rem;
-  height: 10rem;
-  margin-left: 1.5rem;
-}
-
-@media (max-width: 390px) {
-  .logo img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.btn-important {
-  display: inline-block;
-  background-color: blue;
-  color: white !important;
-  padding: 0.7rem 1rem;
-  text-decoration: none;
-  border-radius: 20px;
 }
 
