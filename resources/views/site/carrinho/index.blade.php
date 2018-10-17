@@ -4,7 +4,7 @@
 @section('pagina_conteudo')
 
 <div class="container">
-    <div class="row">
+    <div class="">
         <h3>Produtos no carrinho</h3>
         <hr/>
         @if (Session::has('mensagem-sucesso'))
@@ -18,8 +18,8 @@
             </div>
         @endif
         @forelse ($pedidos as $pedido)
-            <h5 class="col l6 s12 m6"> Pedido: {{ $pedido->id }} </h5>
-            <h5 class="col l6 s12 m6"> Criado em: {{ $pedido->created_at->format('d/m/Y H:i') }} </h5>
+            <h5 class=""> Pedido: {{ $pedido->id }} </h5>
+            <h5 class=""> Criado em: {{ $pedido->created_at->format('d/m/Y H:i') }} </h5>
             <table>
                 <thead>
                     <tr>
