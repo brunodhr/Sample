@@ -10952,6 +10952,49 @@ body {
   font-family: 'Roboto';
 }
 
+.one-time {
+  max-width: 100%;
+  max-height: 90rem;
+  overflow-y: hidden;
+}
+
+.one-time .slick-dots {
+  bottom: 1px;
+}
+
+.one-time .slick-dots .slick-active button:after,
+.one-time .slick-dots .slick-active button:before {
+  color: white;
+  font-size: 60px;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-49%, -43%);
+          transform: translate(-49%, -43%);
+}
+
+.one-time .slick-dots li button {
+  background-color: black;
+  border-radius: 50%;
+  width: 2rem;
+}
+
+.one-time .slick-dots li button:after,
+.one-time .slick-dots li button:before {
+  color: transparent;
+}
+
+.pointers {
+  position: absolute;
+  bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .form-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11029,5 +11072,11 @@ body {
   font-size: 17px;
   font-weight: 300;
   color: black;
+}
+
+.field-login {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 

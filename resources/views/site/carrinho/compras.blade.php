@@ -90,17 +90,17 @@
         <div class="box-comprascanceladas">
             <h4 class="text-compras">Compras canceladas</h4>
             @forelse ($cancelados as $pedido)
-                <h5 class="col l2 s12 m2"> Pedido: {{ $pedido->id }} </h5>
-                <h5 class="col l5 s12 m5"> Criado em: {{ $pedido->created_at->format('d/m/Y H:i') }} </h5>
-                <h5 class="col l5 s12 m5"> Cancelado em: {{ $pedido->updated_at->format('d/m/Y H:i') }} </h5>
+                <h5 class="text-compras"> Pedido: {{ $pedido->id }} </h5>
+                <h5 class="text-compras"> Criado em: {{ $pedido->created_at->format('d/m/Y H:i') }} </h5>
+                <h5 class="text-compras"> Cancelado em: {{ $pedido->updated_at->format('d/m/Y H:i') }} </h5>
                 <table>
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Produto</th>
-                            <th>Valor</th>
-                            <th>Desconto</th>
-                            <th>Total</th>
+                            <th class="text-compras">Produto</th>
+                            <th class="text-compras">Valor</th>
+                            <th class="text-compras">Desconto</th>
+                            <th class="text-compras">Total</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -114,11 +114,11 @@
                             @endphp
                         <tr>
                             <td>
-                                <img width="100" height="100" src="{{ $pedido_produto->produto->imagem }}">
+                                <img width="100" height="100" src="{{ asset($pedido_produto->produto->imagem) }}">
                             </td>
-                            <td>{{ $pedido_produto->produto->nome }}</td>
-                            <td>R$ {{ number_format($pedido_produto->valor, 2, ',', '.') }}</td>
-                            <td>R$ {{ number_format($pedido_produto->desconto, 2, ',', '.') }}</td>
+                            <td class="text-compras">{{ $pedido_produto->produto->nome }}</td>
+                            <td class="text-compras">R$ {{ number_format($pedido_produto->valor, 2, ',', '.') }}</td>
+                            <td class="text-compras">R$ {{ number_format($pedido_produto->desconto, 2, ',', '.') }}</td>
                             
                             <td>R$ {{ number_format($total_produto, 2, ',', '.') }}</td>
                         </tr>
